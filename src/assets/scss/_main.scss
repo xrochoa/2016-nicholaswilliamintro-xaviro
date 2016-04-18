@@ -1,0 +1,27 @@
+html {
+	background: url(../img/bg.jpg) center center / cover no-repeat fixed;
+}
+
+#site-nav {
+    background: black;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img-logo {
+    width: 400px;
+    margin-top: 20px;
+    @extend %center-block;
+}
+
+#social-icons {
+    width: 200px;
+    @extend %center-block;
+    .cell {
+    	width: 25%;
+    	padding: 10px;
+    	margin-bottom: 10px;
+    }
+}
