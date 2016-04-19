@@ -34,8 +34,8 @@ $(function() {
 
     });
 
-    /* OVERLAY */
-    
-    $('#overlay').addClass("animate");
+    /* OVERLAY AND FOOTER*/
+
+    $('#overlay, #site-footer').addClass("animate");
 
 });

@@ -70,3 +70,20 @@ path {
         }
     }
 }
+
+#site-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition: 1s opacity 3s ease;
+    opacity: 0;
+    p {
+        color: white;
+        text-align: center;
+        font-family: 'Inconsolata';
+        font-size: 0.7em;
+    }
+    &.animate {
+        opacity: 0.4;
+    }
+}
