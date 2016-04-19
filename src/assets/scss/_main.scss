@@ -1,5 +1,35 @@
 html {
-	background: url(../img/bg.jpg) center center / cover no-repeat fixed;
+    background: url(../img/bg.jpg) center center / cover no-repeat fixed;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 1;
+    transition: 1s opacity 3s ease;
+    &.animate {
+        opacity: 0.3;
+    }
+}
+
+path {
+    fill: black;
+    //stroke-dashoffset is set by js then...
+    stroke: black;
+    stroke-width: 1;
+    //..after .1s this class is added overwritting stroke-dashoffset
+    &.animate {
+        stroke: white;
+        transition: stroke-dashoffset 2s ease, 1s fill 2s ease;
+        fill: white;
+        stroke-dashoffset: 0 !important;
+    }
 }
 
 #site-nav {
@@ -20,8 +50,23 @@ html {
     width: 200px;
     @extend %center-block;
     .cell {
-    	width: 25%;
-    	padding: 10px;
-    	margin-bottom: 10px;
+        width: 25%;
+        padding: 10px;
+        margin-bottom: 10px;
+        //animation init
+        transform-origin: 50% 50%;
+        transform: scale(0);
+        transition: transform 1s ease;
+        &.animate {
+            transform: scale(1);
+        }
+        //hover
+        img {
+            transition: border .2s ease;
+            border-radius: 50% 50%;
+        }
+        &:hover img {
+            border: 2px solid white;
+        }
     }
 }
