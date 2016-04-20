@@ -41,7 +41,7 @@ path {
 }
 
 .img-logo {
-    width: 400px;
+    max-width: 80%;
     margin-top: 20px;
     @extend %center-block;
 }
