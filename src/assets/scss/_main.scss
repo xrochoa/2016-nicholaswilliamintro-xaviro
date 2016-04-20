@@ -48,6 +48,10 @@ path {
     width: 80%;
     max-width: 480px;
     margin-top: 20px;
+    svg {
+        //safari support
+        width: 100%;
+    }
 }
 
 #social-icons {
