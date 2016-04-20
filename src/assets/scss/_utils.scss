@@ -1,5 +1,5 @@
 // ---------
-// TOOLS
+// COMMON PLACEHOLDERS
 // ---------
 %center-block {
     display: block;
@@ -7,7 +7,7 @@
 }
 
 // ---------
-// GRID SYSTEM
+// COMPATIBLE GRID SYSTEM
 // ---------
 $pad: 0;
 %clearfix {
@@ -53,4 +53,11 @@ $pad: 0;
 
 .cell {
     @include make-cell;
+}
+
+// ---------
+// FLEX GRID SYSTEM
+// ---------
+.flex {
+    display: flex;
 }

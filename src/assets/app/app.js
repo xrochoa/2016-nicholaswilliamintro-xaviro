@@ -24,7 +24,7 @@ $(function() {
 
     /* ANIMATE ICONS */
 
-    $("#social-icons .cell").each(function(index) {
+    $("#social-icons .icon").each(function(index) {
 
         var $icon = $(this);
 

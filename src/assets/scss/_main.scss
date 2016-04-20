@@ -33,6 +33,10 @@ path {
 }
 
 #site-nav {
+    //flex
+    flex-direction: column;
+    align-items: center;
+    //block
     background: black;
     position: absolute;
     width: 100%;
@@ -41,18 +45,20 @@ path {
 }
 
 .img-logo {
-    max-width: 80%;
+    width: 80%;
+    max-width: 480px;
     margin-top: 20px;
-    @extend %center-block;
 }
 
 #social-icons {
+    //flex
+    justify-content: space-between;
+    //box
     width: 200px;
-    @extend %center-block;
-    .cell {
-        width: 25%;
-        padding: 10px;
-        margin-bottom: 10px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    .icon {
+        width: 20%;
         //animation init
         transform-origin: 50% 50%;
         transform: scale(0);
