@@ -72,11 +72,12 @@ path {
         }
         //hover
         img {
-            transition: border .2s ease;
+            transition: box-shadow .2s ease;
+            background: #868A8E;
             border-radius: 50% 50%;
         }
         &:hover img {
-            border: 2px solid white;
+            box-shadow: 0 0 0 3px #fff;
         }
     }
 }
