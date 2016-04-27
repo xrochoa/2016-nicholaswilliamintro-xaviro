@@ -10,6 +10,7 @@
     margin-top: 20px;
     transition: opacity 1s ease;
     opacity: 0;
+    transform: translateX(5%);
     svg {
         //safari support
         width: 100%;
