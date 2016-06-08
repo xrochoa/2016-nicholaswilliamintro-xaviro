@@ -1,0 +1,17 @@
+{
+  "name": "nicholaswilliam",
+  "description": "An ecommerce site for Nicholas William",
+  "main": "gulpfile.js",
+  "authors": [
+    "Xavier Reyes Ochoa <xareyesochoa@gmail.com> (http://www.xaviro.com)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
