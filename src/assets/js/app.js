@@ -1,12 +1,18 @@
 /*----------  LIBRARIES  ----------*/
 
-//=include ./lib/XXXXXXXXXX.js
+//=include ./lib/angular.js
+//=include ./lib/angular-route.js
+
 
 /*----------  CUSTOM JS  ----------*/
 
 (function() {
 
     'use strict';
-    //modular code as //=include dependencies
+    angular.module('app', ['ngRoute']);
+    //=include ./app/ctrl/main.js
+    //=include ./app/ctrl/shop.js
+    //=include ./app/config.js
+
 
 }());
