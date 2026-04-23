@@ -50,20 +50,47 @@
 
 /* site content */
 
+#site-content {
+    padding: 20px 0 40px;
+}
+
 .shirt-row {
-    width: 80%;
-    max-width: 900px;
+    width: 90%;
+    max-width: 1100px;
     justify-content: space-between;
+    flex-wrap: wrap;
     @extend %center-block;
+
+    > div {
+        flex: 0 0 23%;
+        margin-bottom: 20px;
+    }
 }
 
 .shirt {
     max-width: 100%;
+    display: block;
     cursor: pointer;
     transition: transform .3s ease;
     &:hover {
         transform: scale(1.05);
     }
+}
+
+@media (max-width: 720px) {
+    .shirt-row > div {
+        flex: 0 0 48%;
+    }
+}
+
+@media (max-width: 420px) {
+    .shirt-row > div {
+        flex: 0 0 100%;
+    }
+}
+
+.img-logo img {
+    width: 100%;
 }
 
 

@@ -1,0 +1,9 @@
+[build]
+  command  = "npm run build"
+  publish  = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Default pretty-URL behaviour on Netlify already serves /shop/ as /shop/index.html.
+# No redirect rules needed for this static site.

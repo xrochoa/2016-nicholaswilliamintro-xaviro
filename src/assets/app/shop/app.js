@@ -1,34 +1,37 @@
 'use strict';
 
-window.onload = function() {
+$(function () {
 
     /* ANIMATE LOGO, ICONS & FOOTER */
 
-    $(".img-logo, #social-icons .icon, #site-footer").each(function(index) {
-
-        $(this).addClass("animate");
-
+    $('.img-logo, #social-icons .icon, #site-footer').each(function (index) {
+        var $el = $(this);
+        setTimeout(function () { $el.addClass('animate'); }, 150 * index);
     });
 
     /* MODAL */
 
-    $('.shirt').on('click', function() {
+    var $modal = $('#modal');
 
-        //open modal
-        $('#modal').addClass('open');
+    function openShirt(index) {
+        var num = index + 1;
+        $('#shirt-modal').html('<img src="../assets/img/shirts/' + num + '.png" alt="Tee No. ' + (num < 10 ? '0' + num : num) + '" />');
+        $('#text-modal .shirt-title').text('Tee No. ' + (num < 10 ? '0' + num : num));
+        $modal.addClass('open');
+    }
 
-        //change image
-        var index = $('.shirt').index(this);
-        //console.log(index);
-        $("#shirt-modal").html('<img src="../assets/img/shirts/' + (index + 1) + '.png">');
+    function closeModal() {
+        $modal.removeClass('open');
+    }
 
+    $('.shirt').on('click', function () {
+        openShirt($('.shirt').index(this));
     });
 
-    //close modal
-    $('.close-modal-button, #modal-overlay').on('click', function() {
-        $('#modal').removeClass('open');
+    $('.close-modal-button, #modal-overlay').on('click', closeModal);
+
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
     });
 
-
-
-};
+});

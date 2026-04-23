@@ -5,15 +5,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>XXXXXXXXXXXXXXXXXXXX</title>
-    <meta name="description" content="XXXXXXXXXXXXXXXXXXXX" />
-    <!-- Facebook XXXXXXXXXXXXXXXXXXXX -->
-    <meta property="og:url" content="XXXXXXXXXXXXXXXXXXXX" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="XXXXXXXXXXXXXXXXXXXX" />
-    <meta property="og:description" content="XXXXXXXXXXXXXXXXXXXX" />
-    <meta property="og:image" content="./assets/img/facebook.png" />
-    <!-- Favicon XXXXXXXXXXXXXXXXXXXX -->
+    <title>Nicholas William — Shop</title>
+    <meta name="description" content="Browse the Nicholas William collection of hand-printed graphic t-shirts." />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nicholas William — Shop" />
+    <meta property="og:description" content="Browse the Nicholas William collection of hand-printed graphic t-shirts." />
     <!-- Custom css -->
     <link href="../assets/css/shop/style.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,45 +22,48 @@
 
 <body>
     <!-- modal -->
-    <section id='modal'>
+    <section id="modal">
         <div id="modal-overlay"></div>
         <div id="modal-content" class="flex">
-            <div id="shirt-modal"><img src="../assets/img/shirts/1.png"></div>
-            <div id="text-modal"><p>text</p></div>
-        </div>
+            <button class="close-modal-button" aria-label="Close">&times;</button>
+            <div id="shirt-modal"><img src="../assets/img/shirts/1.png" alt="" /></div>
+            <div id="text-modal">
+                <h2 class="shirt-title">Tee No. 01</h2>
+                <p class="shirt-desc">Hand-printed graphic tee from the Nicholas William collection. 100% ring-spun cotton.</p>
+                <p class="shirt-price">$28.00</p>
+            </div>
         </div>
     </section>
     <!-- nav -->
     <nav id="site-nav" class="flex">
-        <img class="img-logo" src="../assets/img/logo.svg" />
+        <a href="../" class="img-logo"><img src="../assets/img/logo.svg" alt="Nicholas William" /></a>
         <div id="social-icons" class="flex">
-            <a class="icon" href="" target="_blank"><img src="../assets/img/icon-facebook.svg" /></a>
-            <a class="icon" href="" target="_blank"><img src="../assets/img/icon-twitter.svg" /></a>
-            <a class="icon" href="" target="_blank"><img src="../assets/img/icon-instagram.svg" /></a>
-            <a class="icon" href="../info"><img src="../assets/img/icon-info.svg" /></a>
+            <a class="icon" href="#" aria-label="Facebook"><img src="../assets/img/icon-facebook.svg" alt="Facebook" /></a>
+            <a class="icon" href="#" aria-label="Twitter"><img src="../assets/img/icon-twitter.svg" alt="Twitter" /></a>
+            <a class="icon" href="#" aria-label="Instagram"><img src="../assets/img/icon-instagram.svg" alt="Instagram" /></a>
         </div>
     </nav>
     <!-- content -->
     <section id="site-content">
         <div class="flex shirt-row">
-            <div><img class="shirt" src="../assets/img/shirts/1.png"></div>
-            <div><img class="shirt" src="../assets/img/shirts/2.png"></div>
-            <div><img class="shirt" src="../assets/img/shirts/3.png"></div>
+            <div><img class="shirt" src="../assets/img/shirts/1.png" alt="Tee No. 01" /></div>
+            <div><img class="shirt" src="../assets/img/shirts/2.png" alt="Tee No. 02" /></div>
+            <div><img class="shirt" src="../assets/img/shirts/3.png" alt="Tee No. 03" /></div>
+            <div><img class="shirt" src="../assets/img/shirts/4.png" alt="Tee No. 04" /></div>
         </div>
         <div class="flex shirt-row">
-            <div><img class="shirt" src="../assets/img/shirts/4.png"></div>
-            <div><img class="shirt" src="../assets/img/shirts/5.png"></div>
-            <div><img class="shirt" src="../assets/img/shirts/6.png"></div>
+            <div><img class="shirt" src="../assets/img/shirts/5.png" alt="Tee No. 05" /></div>
+            <div><img class="shirt" src="../assets/img/shirts/6.png" alt="Tee No. 06" /></div>
+            <div><img class="shirt" src="../assets/img/shirts/7.png" alt="Tee No. 07" /></div>
+            <div><img class="shirt" src="../assets/img/shirts/8.png" alt="Tee No. 08" /></div>
         </div>
     </section>
     <!-- footer -->
     <footer id="site-footer">
-        <p>Nicholas William 2016 &copy All rights reserved</p>
+        <p>Nicholas William &copy; 2016 &middot; All rights reserved</p>
     </footer>
     <!-- Libraries -->
-    <!-- build:lib ../assets/js/shop/lib.js -->
     <script src="../assets/lib/jquery.js"></script>
-    <!-- endbuild -->
     <!-- Custom script -->
     <script src="../assets/js/shop/app.js"></script>
 </body>

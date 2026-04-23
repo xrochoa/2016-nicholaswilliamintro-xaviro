@@ -1,14 +1,21 @@
-# OS X meta file for folder options
+# OS files
 .DS_Store
+Thumbs.db
 
-# bower and npm packages
-bower_components
+# Dependencies
 node_modules
 
-#files and folders that are deleted and recreated everytime gulp runs
+# Build output
 dist
+
+# Legacy Gulp-era intermediate outputs (no longer produced, kept ignored)
 src/assets/js
 src/assets/css
 
-#npm error log
+# Logs
 npm-debug.log
+yarn-error.log
+
+# Editors
+.vscode
+.idea
