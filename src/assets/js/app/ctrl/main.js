@@ -1,43 +1,34 @@
-angular.module('app').controller('mainCtrl', function($scope) {
+angular.module('app').controller('mainCtrl', function($scope, $timeout) {
 
-	//FIX THIS SHIT USING JQLITE IN THE RIGHT WAY
+    // Run after the route template has been inserted into the DOM.
+    $timeout(function() {
 
-    /* ANIMATE PATH*/
+        var doc = angular.element(document);
 
-    angular.forEach(angular.element(document).find("path"), function(item) {
-
-        var path = item;
-        //get length of path
-        var length = path.getTotalLength();
-
-        //starting positions
-        angular.element(path).css({
-            "stroke-dasharray": length + ' ' + length,
-            "stroke-dashoffset": length
+        /* Animate SVG logo paths by priming stroke-dasharray/offset, then
+           adding the .animate class so CSS transitions can draw them in. */
+        angular.forEach(doc.find('path'), function(path) {
+            var length = path.getTotalLength();
+            angular.element(path).css({
+                'stroke-dasharray':  length + ' ' + length,
+                'stroke-dashoffset': length
+            });
+            $timeout(function() {
+                angular.element(path).addClass('animate');
+            }, 100);
         });
 
-        setTimeout(function() {
-            angular.element(path).addClass("animate");
-        }, 100);
+        /* Stagger-in the social icons. */
+        angular.forEach(doc.find('a'), function(a, index) {
+            $timeout(function() {
+                angular.element(a).addClass('animate');
+            }, 500 * index);
+        });
+
+        /* Fade-in overlay and footer. */
+        doc.find('div').addClass('animate');
+        doc.find('footer').addClass('animate');
 
     });
 
-    /* ANIMATE ICONS */
-
-    angular.forEach(angular.element(document).find("a"), function(item, index) {
-
-        var a = item;
-
-        setTimeout(function() {
-            angular.element(a).addClass("animate");
-        }, 500 * index);
-
-    });
-
-    /* OVERLAY AND FOOTER*/
-
-    angular.element(document).find('div').addClass("animate");
-    angular.element(document).find('footer').addClass("animate");
-
-
-})
+});

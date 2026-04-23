@@ -1,0 +1,12 @@
+[build]
+  command  = "npm run build"
+  publish  = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# SPA fallback — AngularJS uses html5Mode, so route everything to index.html.
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200

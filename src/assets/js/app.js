@@ -4,15 +4,13 @@
 //=include ./lib/angular-route.js
 
 
-/*----------  CUSTOM JS  ----------*/
+/*----------  APP  ----------*/
 
 (function() {
 
     'use strict';
     angular.module('app', ['ngRoute']);
-    //=include ./app/ctrl/main.js
-    //=include ./app/ctrl/shop.js
     //=include ./app/config.js
-
+    //=include ./app/ctrl/main.js
 
 }());
